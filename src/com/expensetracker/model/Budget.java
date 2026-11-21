@@ -1,11 +1,6 @@
 package com.expensetracker.model;
 
-/**
- * Represents a monthly spending budget for a specific category.
- * Extends Transaction, so id, category, and month come from the parent class (INHERITANCE).
- */
 public class Budget extends Transaction {
-
     private final double limit;
 
     public Budget(String id, String category, String month, double limit) {
@@ -13,14 +8,10 @@ public class Budget extends Transaction {
         this.limit = limit;
     }
 
-    public double getLimit() {
-        return limit;
-    }
+    public double getLimit() { return limit; }
 
     @Override
-    public String getType() {
-        return "Budget";
-    }
+    public String getType() { return "Budget"; }
 
     @Override
     public String getDetails() {
@@ -28,7 +19,5 @@ public class Budget extends Transaction {
     }
 
     @Override
-    public String toString() {
-        return getDetails();
-    }
+    public String toString() { return getDetails(); }
 }
