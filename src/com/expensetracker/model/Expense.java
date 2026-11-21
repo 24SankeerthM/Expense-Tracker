@@ -1,11 +1,6 @@
 package com.expensetracker.model;
 
-/**
- * Represents a single expense record.
- * Extends Transaction, so id, category, and month come from the parent class (INHERITANCE).
- */
 public class Expense extends Transaction {
-
     private final String description;
     private final double amount;
 
@@ -15,18 +10,11 @@ public class Expense extends Transaction {
         this.amount = amount;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
+    public String getDescription() { return description; }
+    public double getAmount() { return amount; }
 
     @Override
-    public String getType() {
-        return "Expense";
-    }
+    public String getType() { return "Expense"; }
 
     @Override
     public String getDetails() {
@@ -34,7 +22,5 @@ public class Expense extends Transaction {
     }
 
     @Override
-    public String toString() {
-        return getDetails();
-    }
+    public String toString() { return getDetails(); }
 }
